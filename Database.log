@@ -1,0 +1,292 @@
+2021-06-16 11:34:29,143:Database: collection names cannot be empty
+Traceback (most recent call last):
+  File "C:\Users\Vedant\Ineuron MLDPI\python project\flipkart-full-scrapper(AWS rohit)\new_app.py", line 288, in scrap
+    check=db[search].find({})
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\database.py", line 300, in __getitem__
+    return Collection(self, name)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\collection.py", line 170, in __init__
+    raise InvalidName("collection names cannot be empty")
+pymongo.errors.InvalidName: collection names cannot be empty
+2023-05-15 00:28:03,465:Database: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+Traceback (most recent call last):
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 89, in _resolve_uri
+    results = _resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 43, in _resolve
+    return resolver.resolve(*args, **kwargs)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1368, in resolve
+    return get_default_resolver().resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1190, in resolve
+    (request, answer) = resolution.next_request()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 691, in next_request
+    raise NXDOMAIN(qnames=self.qnames_to_try, responses=self.nxdomain_responses)
+dns.resolver.NXDOMAIN: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 279, in scrap
+    db_connetion=mg.MongoClient("mongodb+srv://scrapper:12345@scrapperdb.p8wac.mongodb.net/scrapper?retryWrites=true&w=majority")
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\mongo_client.py", line 736, in __init__
+    res = uri_parser.parse_uri(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\uri_parser.py", line 542, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 121, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 101, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+2023-05-15 00:28:03,474:Database: local variable 'db_connetion' referenced before assignment
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 287, in scrap
+    db=db_connetion['Scrapper']
+UnboundLocalError: local variable 'db_connetion' referenced before assignment
+2023-05-15 00:34:16,370:Database: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+Traceback (most recent call last):
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 89, in _resolve_uri
+    results = _resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 43, in _resolve
+    return resolver.resolve(*args, **kwargs)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1368, in resolve
+    return get_default_resolver().resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1190, in resolve
+    (request, answer) = resolution.next_request()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 691, in next_request
+    raise NXDOMAIN(qnames=self.qnames_to_try, responses=self.nxdomain_responses)
+dns.resolver.NXDOMAIN: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 272, in scrap
+    db_connetion=mg.MongoClient("mongodb+srv://scrapper:12345@scrapperdb.p8wac.mongodb.net/scrapper?retryWrites=true&w=majority")
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\mongo_client.py", line 736, in __init__
+    res = uri_parser.parse_uri(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\uri_parser.py", line 542, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 121, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 101, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+2023-05-15 00:34:16,374:Database: local variable 'db_connetion' referenced before assignment
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 280, in scrap
+    db=db_connetion['Scrapper']
+UnboundLocalError: local variable 'db_connetion' referenced before assignment
+2023-05-15 00:52:54,079:Database: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+Traceback (most recent call last):
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 89, in _resolve_uri
+    results = _resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 43, in _resolve
+    return resolver.resolve(*args, **kwargs)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1368, in resolve
+    return get_default_resolver().resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1190, in resolve
+    (request, answer) = resolution.next_request()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 691, in next_request
+    raise NXDOMAIN(qnames=self.qnames_to_try, responses=self.nxdomain_responses)
+dns.resolver.NXDOMAIN: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 272, in scrap
+    db_connetion=mg.MongoClient("mongodb+srv://scrapper:12345@scrapperdb.p8wac.mongodb.net/scrapper?retryWrites=true&w=majority")
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\mongo_client.py", line 736, in __init__
+    res = uri_parser.parse_uri(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\uri_parser.py", line 542, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 121, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 101, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+2023-05-15 00:52:54,082:Database: local variable 'db_connetion' referenced before assignment
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 280, in scrap
+    db=db_connetion['Scrapper']
+UnboundLocalError: local variable 'db_connetion' referenced before assignment
+2023-05-15 00:54:28,583:Database: DB connection error 
+Traceback (most recent call last):
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 89, in _resolve_uri
+    results = _resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 43, in _resolve
+    return resolver.resolve(*args, **kwargs)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1368, in resolve
+    return get_default_resolver().resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1190, in resolve
+    (request, answer) = resolution.next_request()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 691, in next_request
+    raise NXDOMAIN(qnames=self.qnames_to_try, responses=self.nxdomain_responses)
+dns.resolver.NXDOMAIN: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 272, in scrap
+    db_connetion=mg.MongoClient("mongodb+srv://scrapper:12345@scrapperdb.p8wac.mongodb.net/scrapper?retryWrites=true&w=majority")
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\mongo_client.py", line 736, in __init__
+    res = uri_parser.parse_uri(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\uri_parser.py", line 542, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 121, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 101, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+2023-05-15 00:54:28,587:Database: local variable 'db_connetion' referenced before assignment
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 280, in scrap
+    db=db_connetion['Scrapper']
+UnboundLocalError: local variable 'db_connetion' referenced before assignment
+2023-05-15 00:56:13,600:Database: 'Cursor' object has no attribute 'count'
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 284, in scrap
+    if(check.count()>0):
+AttributeError: 'Cursor' object has no attribute 'count'
+2023-05-15 13:07:41,694:Database: 'Cursor' object has no attribute 'count'
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 284, in scrap
+    if(check.count()>0):
+AttributeError: 'Cursor' object has no attribute 'count'
+2023-05-15 13:35:16,154:Database: 'Cursor' object has no attribute 'count'
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 284, in scrap
+    if(check.count()>0):
+AttributeError: 'Cursor' object has no attribute 'count'
+2023-05-21 21:01:00,912:Database: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+Traceback (most recent call last):
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 89, in _resolve_uri
+    results = _resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 43, in _resolve
+    return resolver.resolve(*args, **kwargs)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1368, in resolve
+    return get_default_resolver().resolve(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 1190, in resolve
+    (request, answer) = resolution.next_request()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\dns\resolver.py", line 691, in next_request
+    raise NXDOMAIN(qnames=self.qnames_to_try, responses=self.nxdomain_responses)
+dns.resolver.NXDOMAIN: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 273, in scrap
+    db_connetion = mg.MongoClient(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\mongo_client.py", line 736, in __init__
+    res = uri_parser.parse_uri(
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\uri_parser.py", line 542, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 121, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 101, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "C:\Users\Vedant\anaconda3\lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net.
+2023-05-21 21:01:00,946:Database: local variable 'db_connetion' referenced before assignment
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 282, in scrap
+    db = db_connetion['Scrapper']
+UnboundLocalError: local variable 'db_connetion' referenced before assignment
+2023-05-22 01:12:47,299:Database: 'Cursor' object has no attribute 'count'
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 283, in scrap
+    if (check.count() > 0):
+AttributeError: 'Cursor' object has no attribute 'count'
+2023-05-22 01:15:37,389:Database: can only concatenate str (not "Cursor") to str
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 282, in scrap
+    print("check variable printing \n"+check)
+TypeError: can only concatenate str (not "Cursor") to str
+2023-05-22 01:25:29,684:Database: object of type 'Cursor' has no len()
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 282, in scrap
+    if (len(check)>0):
+TypeError: object of type 'Cursor' has no len()
+2023-06-08 23:14:57,347:Database: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus().
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 279, in scrap
+    db_connetion = pymongo.MongoClient("mongodb+srv://vedant:Vedant@2000@cluster0.nh5qckn.mongodb.net/?retryWrites=true&w=majority")
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\mongo_client.py", line 639, in __init__
+    res = uri_parser.parse_uri(
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\uri_parser.py", line 470, in parse_uri
+    user, passwd = parse_userinfo(userinfo)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\uri_parser.py", line 60, in parse_userinfo
+    raise InvalidURI("Username and password must be escaped according to "
+pymongo.errors.InvalidURI: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus().
+2023-06-08 23:14:57,383:Database: local variable 'db_connetion' referenced before assignment
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 287, in scrap
+    db = db_connetion['Scrapper']
+UnboundLocalError: local variable 'db_connetion' referenced before assignment
+2023-06-12 16:52:53,909:Database: 'Collection' object is not callable. If you meant to call the 'find_all' method on a 'Collection' object it is failing because no such method exists.
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 288, in scrap
+    result = collection.find_all({'term': search})
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\collection.py", line 3445, in __call__
+    raise TypeError("'Collection' object is not callable. If you meant to "
+TypeError: 'Collection' object is not callable. If you meant to call the 'find_all' method on a 'Collection' object it is failing because no such method exists.
+2023-06-12 16:53:42,343:Database: 'Cursor' object has no attribute 'get'
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 289, in scrap
+    if result and result.get('reviews', 0) > 0:
+AttributeError: 'Cursor' object has no attribute 'get'
+2023-06-14 15:58:53,455:Database: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+Traceback (most recent call last):
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\pool.py", line 1278, in _get_socket
+    sock_info = self.sockets.popleft()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Ineuron MLDPI\python project\flipkart-full-scrapper\new_app.py", line 293, in scrap
+    if (check.count() > 0):
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\cursor.py", line 822, in count
+    return self.__collection._count(
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\collection.py", line 1664, in _count
+    return self.__database.client._retryable_read(
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\mongo_client.py", line 1464, in _retryable_read
+    with self._slaveok_for_server(read_pref, server, session,
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\mongo_client.py", line 1309, in _slaveok_for_server
+    with self._get_socket(server, session, exhaust=exhaust) as sock_info:
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\mongo_client.py", line 1246, in _get_socket
+    with server.get_socket(
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\pool.py", line 1231, in get_socket
+    sock_info = self._get_socket(all_credentials)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\pool.py", line 1281, in _get_socket
+    sock_info = self.connect(all_credentials)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\pool.py", line 1197, in connect
+    sock_info.check_auth(all_credentials)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\pool.py", line 793, in check_auth
+    self.authenticate(credentials)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\auth.py", line 333, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\network.py", line 159, in command
+    helpers._check_command_response(
+  File "C:\Users\Vedant\anaconda3\envs\flipkart-full-scrapper\lib\site-packages\pymongo\helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
