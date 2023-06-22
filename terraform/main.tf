@@ -9,10 +9,10 @@ resource "aws_lambda_function" "home_api" {
   filename      = "deployment.zip"
   depends_on = [
     aws_iam_role_policy_attachment.lambda_logs,
-    aws_cloudwatch_log_group.example,
+    aws_cloudwatch_log_group.home_api,
   ]
 }
-resource "aws_cloudwatch_log_group" "example" {
+resource "aws_cloudwatch_log_group" "home_api" {
   name              = "/aws/lambda/${var.lambda_function_name}"
   retention_in_days = 14
 }
