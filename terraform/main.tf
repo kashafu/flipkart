@@ -5,7 +5,7 @@ resource "aws_lambda_function" "home_api" {
   function_name = var.lambda_function_name
   runtime       = "python3.9"
   role          = aws_iam_role.lambda_role.arn
-  handler       = "python/app.lambda_handler"
+  handler       = "app.lambda_handler"
   filename      = "deployment.zip"
   depends_on = [
     aws_iam_role_policy_attachment.lambda_logs,

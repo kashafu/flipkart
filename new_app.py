@@ -220,7 +220,6 @@
 #     return product_info
 #
 #
-#
 # @cross_origin()
 # @app.route("/", methods=["GET", "POST"])
 # def homepage():
