@@ -265,6 +265,8 @@ def homepage():
 def lamda_homepage(event, context):
     if event['httpMethod'] == 'GET' or event['httpMethod'] == 'POST':
         return homepage()
+
+
 @app.route("/about", methods=["GET", "POST"])
 def about():
     return render_template('about.html')
